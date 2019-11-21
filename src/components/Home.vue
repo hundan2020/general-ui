@@ -1,9 +1,11 @@
 <template>
 <el-row>
-  <el-col :sm="24" :md="12" :span="12"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :sm="24" :md="12" :span="12"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="12"><div class="grid-content"></div></el-col>
-  <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
+  <h2>command line to gui</h2>
+  <ul>
+    <li>
+      <router-link to="/sqlmap">sqlmap</router-link>
+    </li>
+  </ul>
 </el-row>
 
 </template>

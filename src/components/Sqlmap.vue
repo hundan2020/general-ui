@@ -109,38 +109,38 @@
       </el-col>
     </el-row>
     <el-row class="aleft">
-      <el-col :sm="{offset: 2}" :xs="{offset: 2}">
+      <el-col :sm="{offset: 2, span: 20}" :xs="{offset: 2, span: 20}">
         <el-row>
-          <el-col :xs="{span: 9}" :sm="{span: 7}" :md="{span: 4}" :span="2">
+          <el-col :xs="{span: 12}" :sm="{span: 8}" :md="{span: 5}" :span="2">
             <el-switch v-model="drop_set_cookie" active-text="忽略Set-Cookie" ></el-switch>
           </el-col>
-          <el-col :xs="{span: 6}" :sm="{span: 7}" :md="{span: 3}" :span="2">
+          <el-col :xs="{span: 12}" :sm="{span: 8}" :md="{span: 3}" :span="2">
             <el-switch @change="ua_mobile_conflict(0)" v-model="mobile" active-text="伪装手机" ></el-switch>
           </el-col>
-          <el-col :xs="{span: 6}" :sm="{span: 7}" :md="{span: 3}" :span="2">
+          <el-col :xs="{span: 12}" :sm="{span: 8}" :md="{span: 3}" :span="2">
             <el-switch @change="ua_mobile_conflict(1)" v-model="random_agent" active-text="随机UA" ></el-switch>
           </el-col>
-          <el-col class="aleft" :xs="{span: 7}" :sm="{span: 5}" :md="{span: 3}" :span="2">
+          <el-col class="aleft" :xs="{span: 12}" :sm="{span: 7}" :md="{span: 3}" :span="2">
             <el-switch @change="ua_mobile_conflict(2)" v-model="user_agent_switch" active-text="指定UA" ></el-switch>
           </el-col>
-          <el-col class="aleft" :xs="{span: 13}" :sm="{span: 15}" :md="{span: 7}" :span="10">
+          <el-col class="aleft" :xs="{span: 24}" :sm="{span: 17}" :md="{span: 10}" :span="10">
             <el-input v-model="user_agent" :disabled="!user_agent_switch" placeholder="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"></el-input>
           </el-col>
         </el-row>
       </el-col>
     </el-row>
     <el-row>
-      <el-col :offset="2">
+      <el-col :offset="2" :span="20">
         <el-row>
-          <el-col :xs="{span: 20}" :sm="{span: 6}">
+          <el-col :xs="{span: 24}" :sm="{span: 8}">
             指定host
             <el-input v-model="host" placeholder="hundan.org"></el-input>
           </el-col>
-          <el-col :xs="{span: 20}" :sm="{span: 7}">
+          <el-col :xs="{span: 24}" :sm="{span: 8}">
             指定referer
             <el-input v-model="referer" placeholder="https://hundan.org/"></el-input>
           </el-col>
-          <el-col :xs="{span: 20}" :sm="{span: 7}">
+          <el-col :xs="{span: 24}" :sm="{span: 8}">
             指定headers
             <el-input
             type="textarea"
@@ -154,9 +154,9 @@ ETag: 123"
       </el-col>
     </el-row>
     <el-row>
-      <el-col :offset="2">
+      <el-col :offset="2" :span="20">
         <el-row>
-          <el-col :xs="{span: 20}" :sm="{span: 6}">
+          <el-col :xs="{span: 24}" :sm="{span: 8}">
             401质询验证方式
             <el-select v-model="auth_type" filterable placeholder="请选择">
                 <el-option
@@ -167,11 +167,11 @@ ETag: 123"
                 </el-option>
               </el-select>
           </el-col>
-          <el-col :xs="{span: 20}" :sm="{span: 7}">
+          <el-col :xs="{span: 24}" :sm="{span: 8}">
             401质询账号密码
             <el-input v-model="test" placeholder="username:password"></el-input>
           </el-col>
-          <el-col :xs="{span: 20}" :sm="{span: 7}">
+          <el-col :xs="{span: 24}" :sm="{span: 8}">
             401质询PEM文件
             <el-input v-model="test" placeholder="C:\Users\MECHREVO\Desktop\Pentest Logs\hundan.org\hundan.org.pem">
             </el-input>
@@ -180,31 +180,31 @@ ETag: 123"
       </el-col>
     </el-row>
     <el-row>
-      <el-col :offset="2">
+      <el-col :offset="2" :span="20">
         <el-row>
-          <el-col :xs="{span: 8}" :sm="{span: 4}" :md="{span: 4}" :span="2">
+          <el-col :xs="{span: 10}" :sm="{span: 5}" :md="{span: 5}" :span="2">
             忽略http错误代码
             <el-input v-model="ignore_code" placeholder="500"></el-input>
           </el-col>
-          <el-col :xs="{span: 6}" :sm="{span: 4}" :md="{span: 3}" :span="2">
+          <el-col :xs="{span: 7}" :sm="{span: 5}" :md="{span: 4}" :span="2">
             每次请求延时
             <el-input v-model="delay" placeholder="5">
               <template slot="append">秒</template>
             </el-input>
           </el-col>
-          <el-col :xs="{span: 6}" :sm="{span: 4}" :md="{span: 3}" :span="2">
+          <el-col :xs="{span: 7}" :sm="{span: 5}" :md="{span: 4}" :span="2">
             最大超时时间
             <el-input v-model="test" placeholder="30">
               <template slot="append">秒</template>
             </el-input>
           </el-col>
-          <el-col :xs="{span: 8}" :sm="{span: 4}" :md="{span: 3}" :span="2">
+          <el-col :xs="{span: 10}" :sm="{span: 5}" :md="{span: 4}" :span="2">
             最大超时重试
             <el-input v-model="test" placeholder="3">
               <template slot="append">次</template>
             </el-input>
           </el-col>
-          <el-col :xs="{span: 12}" :sm="{span: 4}" :md="{span: 7}" :span="2">
+          <el-col :xs="{span: 14}" :sm="{span: 4}" :md="{span: 7}" :span="2">
             参数随机填充
             <el-input v-model="test" placeholder="id;event;target;param3;...">
             </el-input>
@@ -213,27 +213,27 @@ ETag: 123"
       </el-col>
     </el-row>
     <el-row class="aleft">
-      <el-col :offset="2">
+      <el-col :offset="2" :span="20">
         <el-row>
-          <el-col :xs="{span: 10}" :sm="{span: 6}" :md="{span: 4}" :lg="{span: 3}" :xl="{span: 2}" :span="3">
+          <el-col :xs="{span: 12}" :sm="{span: 8}" :md="{span: 6}" :lg="{span: 4}" :xl="{span: 2}" :span="3">
             <el-switch v-model="ignore_proxy" active-text="禁用系统代理" ></el-switch>
           </el-col>
-          <el-col :xs="{span: 10}" :sm="{span: 5}" :md="{span: 4}" :lg="{span: 3}" :xl="{span: 2}" :span="3">
+          <el-col :xs="{span: 12}" :sm="{span: 8}" :md="{span: 6}" :lg="{span: 4}" :xl="{span: 2}" :span="3">
             <el-switch v-model="test" active-text="忽略重定向" ></el-switch>
           </el-col>
-          <el-col :xs="{span: 10}" :sm="{span: 5}" :md="{span: 4}" :lg="{span: 3}" :xl="{span: 2}" :span="3">
+          <el-col :xs="{span: 12}" :sm="{span: 8}" :md="{span: 6}" :lg="{span: 4}" :xl="{span: 2}" :span="3">
             <el-switch v-model="test" active-text="忽略连接超时" ></el-switch>
           </el-col>
-          <el-col :xs="{span: 10}" :sm="{span: 6}" :md="{span: 4}" :lg="{span: 3}" :xl="{span: 2}" :span="3">
+          <el-col :xs="{span: 12}" :sm="{span: 8}" :md="{span: 6}" :lg="{span: 4}" :xl="{span: 2}" :span="3">
             <el-switch v-model="test" active-text="使用https" ></el-switch>
           </el-col>
-          <el-col :xs="{span: 10}" :sm="{span: 6}" :md="{span: 6}" :lg="{span: 4}" :xl="{span: 3}" :span="3">
+          <el-col :xs="{span: 12}" :sm="{span: 8}" :md="{span: 6}" :lg="{span: 4}" :xl="{span: 3}" :span="3">
             <el-switch v-model="test" active-text="使用chunked传输" ></el-switch>
           </el-col>
-          <el-col :xs="{span: 10}" :sm="{span: 5}" :md="{span: 4}" :lg="{span: 5}" :xl="{span: 2}" :span="3">
+          <el-col :xs="{span: 12}" :sm="{span: 8}" :md="{span: 6}" :lg="{span: 5}" :xl="{span: 2}" :span="3">
             <el-switch v-model="test" active-text="使用hpp技术" ></el-switch>
           </el-col>
-          <el-col :xs="{span: 10}" :sm="{span: 6}" :md="{span: 5}" :lg="{span: 5}" :xl="{span: 3}" :span="3">
+          <el-col :xs="{span: 24}" :sm="{span: 8}" :md="{span: 6}" :lg="{span: 6}" :xl="{span: 4}" :span="3">
             <el-switch v-model="test" active-text="对payload进行url编码" ></el-switch>
           </el-col>
         </el-row>
@@ -245,18 +245,18 @@ ETag: 123"
       </el-col>
     </el-row>
     <el-row class="aleft">
-      <el-col :offset="2">
+      <el-col :offset="2" :span="20">
         <el-row>
-          <el-col :xs="{span: 10}" :sm="{span: 6}" :span="3">
+          <el-col :xs="{span: 12}" :sm="{span: 7}" :span="3">
             <el-switch active-text="开启所有优化参数" active-value=""></el-switch>
           </el-col>
-          <el-col :xs="{span: 10}" :sm="{span: 4}" :span="3">
+          <el-col :xs="{span: 12}" :sm="{span: 5}" :span="3">
             <el-switch active-text="预加载"></el-switch>
           </el-col>
-          <el-col :xs="{span: 10}" :sm="{span: 5}" :span="3">
+          <el-col :xs="{span: 12}" :sm="{span: 6}" :span="3">
             <el-switch active-text="http keep-alive"></el-switch>
           </el-col>
-          <el-col :xs="{span: 10}" :sm="{span: 6}" :span="3">
+          <el-col :xs="{span: 12}" :sm="{span: 6}" :span="3">
             <el-switch active-text="只看返回包长度" active-value="null-connection"></el-switch>
           </el-col>
         </el-row>
